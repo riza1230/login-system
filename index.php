@@ -1,10 +1,10 @@
 <?php
-require_once __DIR__ . './config/config.php';
+require_once __DIR__ . './views/includes/header.php';
 session_start();
 
 if (isset($_SESSION['SESSION_EMAIL']))
 {
-    header("Location: welcome.php");
+    header("Location: ./views/welcome.php");
     die();
 }
 
@@ -55,35 +55,24 @@ if (isset($_POST['submit']))
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-        <title>Login</title>
-		<meta charset="UTF-8">
-    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" type="text/css" href="./public/css/style.css">
-	</head>
 
-	<body>
-		<div class="container">
-			<h2>Login Now</h2>
-			<?php echo $msg; ?>
+<title>Home</title>
+<div class="container">
+    <h2>Login Now</h2>
+    <?php echo $msg; ?>
 
-			<form action="" method="POST">
-				<input type="email" class="email" name="email" placeholder="Enter Your Email" autocomplete="username" required>
-				<input type="password" class="password" name="password" placeholder="Enter Your Password" autocomplete="current-password" required>
-				<button name="submit" name="submit" class="btn" type="submit">Login</button>
-			</form>
-				
-				<div>
-					Create Account! 
-					<a href="./views/register.php">Register</a>
-				</div>
+    <form action="" method="POST">
+        <input type="email" class="email" name="email" placeholder="Enter Your Email" autocomplete="username" required>
+        <input type="password" class="password" name="password" placeholder="Enter Your Password" autocomplete="current-password" required>
+        <button name="submit" name="submit" class="btn" type="submit">Login</button>
+    </form>
 
-				<div>
-					<a href="./views/forgot-password.php">Forgot Password?</a>
-				</div>
-		</div>
-	</body>
-</html>
+    <div>
+       <span>Create Account!</span>  
+        <a href="./views/register.php">Register</a>
+    </div>
+
+    <div>
+        <a href="./views/forgot-password.php">Forgot Password?</a>
+    </div>
+</div>
