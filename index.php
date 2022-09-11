@@ -1,78 +1,33 @@
 <?php
-require_once __DIR__ . './views/includes/header.php';
 session_start();
+require_once __DIR__ . './views/includes/header.php';
+require_once __DIR__ . './controllers/mailer-verification.php';
 
 if (isset($_SESSION['SESSION_EMAIL']))
 {
     header("Location: ./views/welcome.php");
     die();
 }
-
-$msg = "";
-
-if (isset($_GET['verification']))
-{
-    if (mysqli_num_rows(mysqli_query($conn, "SELECT * FROM  users  WHERE code='{$_GET['verification']}'")) > 0);
-    $query = mysqli_query($conn, "UPDATE users SET code='' WHERE code='{$_GET['verification']}'");
-
-    if ($query)
-    {
-        $msg = "<div class='alert alert-success'>Account verification has been successfully completed.</div>";
-    }
-    else
-    {
-        header("Location:index.php");
-    }
-}
-
-if (isset($_POST['submit']))
-{
-    $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $password = mysqli_real_escape_string($conn, md5($_POST['password']));
-
-    $sql = "SELECT * FROM users WHERE email ='{$email}' AND password='{$password}' ";
-    $result = mysqli_query($conn, $sql);
-
-    if (mysqli_num_rows($result) === 1)
-    {
-        $row = mysqli_fetch_assoc($result);
-
-        if (empty($row['code']))
-        {
-            $_SESSION['SESSION_EMAIL'] = $email;
-            header("Location: ./views/welcome.php");
-        }
-        else
-        {
-            $msg = "<div class='alert alert-info'>Verify your account first and try again.</div>";
-        }
-
-    }
-    else
-    {	
-        $msg = "<div class='alet alert-danger'>Email or Password do not match</div>";
-    }
-}
 ?>
 
 
 <title>Home</title>
 <div class="container">
-    <h2>Login Now</h2>
     <?php echo $msg; ?>
-
+    <h2>Login Now</h2>
     <form action="" method="POST">
         <input type="email" class="email" name="email" placeholder="Enter Your Email" autocomplete="username" required>
         <input type="password" class="password" name="password" placeholder="Enter Your Password" autocomplete="current-password" required>
-        <button name="submit" name="submit" class="btn" type="submit">Login</button>
+        <button name="submit" class="btn" type="submit">Login</button>
     </form>
-
+    
     <div>
-       <span>Create Account!</span>  
+        <span>Create Account!</span>
         <a href="./views/register.php">Register</a>
     </div>
-
     <div>
         <a href="./views/forgot-password.php">Forgot Password?</a>
     </div>
 </div>
+</body>
+</html>

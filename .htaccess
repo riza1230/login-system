@@ -1,5 +1,5 @@
-ErrorDocument 404 http://localhost/login-system/error/404.php
+ErrorDocument 404 http://localhost/login-system/models/error/404.php
 RewriteEngine On
 RewriteBase /
-RewriteCond %{REQUEST_URI} ^/404/$
+RewriteCond %{REQUEST_URI} ^/error/$
 RewriteRule ^(.*)$ /error/404.php [L]

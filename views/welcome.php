@@ -1,11 +1,12 @@
 <?php
+    require_once __DIR__ . '.\..\config\config.php';
+
     session_start();
     if (!isset($_SESSION['SESSION_EMAIL'])) {
-        header("Location: index.php");
+        header("Location: ./../index.php");
         die();
     }
 
-    require_once __DIR__ . '.\..\config\config.php';
 
     $query = mysqli_query($conn, "SELECT * FROM users WHERE email='{$_SESSION['SESSION_EMAIL']}'");
 
