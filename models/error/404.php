@@ -1,1 +1,2 @@
-hello world
+<?php
+    echo "Page Not Found";

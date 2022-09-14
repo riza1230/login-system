@@ -1,7 +1,6 @@
 <?php
-    require_once __DIR__ . '.\..\config\config.php';
+require_once __DIR__ . './includes/header.php';
 
-    session_start();
     if (!isset($_SESSION['SESSION_EMAIL'])) {
         header("Location: ./../index.php");
         die();

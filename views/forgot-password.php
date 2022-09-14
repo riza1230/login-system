@@ -3,7 +3,6 @@
 require_once __DIR__ . './includes/header.php';
 require_once __DIR__ . './../controllers/mailer-forgot-password.php';
 
-session_start();
 if (isset($_SESSION['SESSION_EMAIL'])) {
     header("Location: welcome.php");
     die();
