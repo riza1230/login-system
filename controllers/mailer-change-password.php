@@ -26,7 +26,8 @@ if (isset($_GET['reset']))
     }
     else
     {
-        $msg = "<div class='alert alert-danger'>Reset Link do not match.</div>";
+        $msg = "<div class='alert alert-danger'>Reset link can only be used once.</div>";
+        
     }
 }
 else

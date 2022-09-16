@@ -8,7 +8,7 @@
 
         if ($query)
         {
-            $msg = "<div class='alert alert-success'>Account verification has been successfully completed.</div>";
+            $msg = "<div>Account verification has been successfully completed.</div>";
         }
         else
         {
@@ -35,13 +35,13 @@
             }
             else
             {
-                $msg = "<div class='alert alert-info'>Verify your account first and try again.</div>";
+                $msg = "<div>Verify your account first and try again.</div>";
             }
 
         }
         else
         {   
-            $msg = "<div class='alet alert-danger'>Email or Password do not match</div>";
+            $msg = "<div>Email or Password do not match</div>";
         }
     }
 ?>

@@ -9,13 +9,13 @@ require_once __DIR__ . './controllers/mailer-verification.php';
     }
 
 ?>
-
-
+<link rel="stylesheet" href="./public/css/style.css">
 <title>Home</title>
 <div class="container">
     <?php echo $msg; ?>
     <h2>Login Now</h2>
     <form action="" method="POST">
+
         <input type="email" class="email" name="email" placeholder="Enter Your Email" autocomplete="username" required>
         <input type="password" class="password" name="password" placeholder="Enter Your Password" autocomplete="current-password" required>
         <button name="submit" class="btn" type="submit">Login</button>
