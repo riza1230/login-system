@@ -16,6 +16,12 @@ require_once __DIR__ . './../controllers/mailer-register.php';
 	<input type="text" name="middlename" placeholder="Enter Middlename">
 	<input type="text" name="lastname" placeholder="Enter Lastname">
 	<input type="date" name="birthday" id="" placeholder="birthday">
+	<select name="sex" id="">
+		<option value="male">male</option>
+		<option value="female">female</option>
+	</select>
+	<input type="text" name="ethnicity" autocomplete="off" placeholder="Enter Ethnicity">
+	<input type="text" name="religion" autocomplete="off" placeholder="Enter Religion">
 	<input type="email" class="email" name="email" placeholder="Enter Your Email" value="<?php if (isset($_POST['submit'])){echo $email;} ?>" required>
 	<input type="number" name="number" autocomplete="off" placeholder="Enter Your ID">
 	<input type="number" name="mobile-number" autocomplete="off" placeholder="Enter Your Mobile Number">

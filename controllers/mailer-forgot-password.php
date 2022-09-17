@@ -13,10 +13,10 @@ if (isset($_POST['submit'])) {
             $body = 'Here is the verification link <b><a href="http://localhost/login-system/views/change-password.php?reset='.$code.'">Click this link to Change Password</a></b>';
             require_once __DIR__ . './mailer.php';
            
-            $msg = "<div class='alert alert-info'>We've send a verification link on your email address.</div>";
+            $msg = "<div>We've send a verification link on your email address.</div>";
         }
     } else {
-        $msg = "<div class='alert alert-danger'>$email - This email address do not found.</div>";
+        $msg = "<div>$email - This email address do not found.</div>";
     }
 }
 

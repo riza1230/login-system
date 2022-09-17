@@ -20,13 +20,13 @@ if (isset($_GET['reset']))
             }
             else
             {
-                $msg = "<div class='alert alert-danger'>Password and Confirm Password do not match.</div>";
+                $msg = "<div>Password and Confirm Password do not match.</div>";
             }
         }
     }
     else
     {
-        $msg = "<div class='alert alert-danger'>Reset link can only be used once.</div>";
+        $msg = "<div>Reset link can only be used once.</div>";
         
     }
 }
