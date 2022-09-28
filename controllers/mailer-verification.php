@@ -8,7 +8,7 @@
 
         if ($query)
         {
-            $msg = "<div>Account verification has been successfully completed.</div>";
+            $msg = "<div class='alert alert-success'>Account verification has been successfully completed.</div>";
         }
         else
         {

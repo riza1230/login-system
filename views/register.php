@@ -7,11 +7,14 @@ require_once __DIR__ . './../controllers/mailer-register.php';
 
 <link rel="stylesheet" href="./../public/css/style.css">
 
+<div class="container">
 <title>Register</title>
-<h2>Register Now</h2>
+<h2 class="text-center">Register Now</h2>
 <?php echo $msg; ?>
-
-<form action="" method="post">
+<div class="card">
+	
+	<div class="card-body">
+	<form action="" method="post">
 	<input type="text" class="name" name="name" placeholder="Enter Firstname" value="<?php if (isset($_POST['submit'])){ echo $name;} ?>" required>
 	<input type="text" name="middlename" placeholder="Enter Middlename">
 	<input type="text" name="lastname" placeholder="Enter Lastname">
@@ -35,6 +38,10 @@ require_once __DIR__ . './../controllers/mailer-register.php';
 </form>
 <div>
 	Have an account! <a href="./../index.php">Login</a>
+</div>
+	</div>
+</div>
+
 </div>
 </body>
 </html>
