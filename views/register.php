@@ -5,43 +5,42 @@ require_once __DIR__ . './../controllers/mailer-register.php';
 
 ?>
 
-<link rel="stylesheet" href="./../public/css/style.css">
-
-<div class="container">
-<title>Register</title>
-<h2 class="text-center">Register Now</h2>
 <?php echo $msg; ?>
-<div class="card">
-	
+
+<div class="container d-flex min-vh-100 align-items-center justify-content-center flex-grow-1">
+<title>Register</title>
+<div class="card mt-2 text-center">
 	<div class="card-body">
-	<form action="" method="post">
-	<input type="text" class="name" name="name" placeholder="Enter Firstname" value="<?php if (isset($_POST['submit'])){ echo $name;} ?>" required>
-	<input type="text" name="middlename" placeholder="Enter Middlename">
-	<input type="text" name="lastname" placeholder="Enter Lastname">
-	<input type="date" name="birthday" id="" placeholder="birthday">
-	<select name="sex" id="">
+	<h2 class="text-center">Register Now</h2>
+	<form action="" class="row p-4 g-3" method="post">
+	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="name" placeholder="Enter Firstname" value="<?php if (isset($_POST['submit'])){ echo $name;} ?>" required>
+	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="middlename" placeholder="Enter Middlename">
+	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="lastname" placeholder="Enter Lastname">
+	<input type="date" class="col-md-3 py-2 mt-4 mr-2 " name="birthday" id="" placeholder="birthday">
+
+	<select name="sex" class="col-md-3 py-2 mt-4 mr-2 " id="">
 		<option value="male">male</option>
 		<option value="female">female</option>
 	</select>
-	<input type="text" name="ethnicity" autocomplete="off" placeholder="Enter Ethnicity">
-	<input type="text" name="religion" autocomplete="off" placeholder="Enter Religion">
-	<input type="email" class="email" name="email" placeholder="Enter Your Email" value="<?php if (isset($_POST['submit'])){echo $email;} ?>" required>
-	<input type="number" name="number" autocomplete="off" placeholder="Enter Your ID">
-	<input type="number" name="mobile-number" autocomplete="off" placeholder="Enter Your Mobile Number">
-	<input type="text" name="Street" autocomplete="off" placeholder="Street Name">
-	<input type="text" name="Barangay" autocomplete="off" placeholder="Barangay Name">
-	<input type="text" name="city" autocomplete="off" placeholder="City Name">
-	<input type="text" name="Province" autocomplete="off" placeholder="Province Name">
-	<input type="password" class="password" name="password" placeholder="Enter Your Password" required>
-	<input type="password" class="confirm-password" name="confirm-password" placeholder="Enter Your Confirm Password" required>
-	<button name="submit" class="btn" type="submit">Register</button>
+	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="ethnicity" autocomplete="off" placeholder="Enter Ethnicity">
+	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="religion" autocomplete="off" placeholder="Enter Religion">
+	<input type="email" class="col-md-3 py-2 mt-4 mr-2 " name="email" placeholder="Enter Your Email" value="<?php if (isset($_POST['submit'])){echo $email;} ?>" required>
+	<input type="number" class="col-md-3 py-2 mt-4 mr-2 " name="number" autocomplete="off" placeholder="Enter Your ID">
+	<input type="number" class="col-md-3 py-2 mt-4 mr-2 " name="mobile-number" autocomplete="off" placeholder="Enter Your Mobile Number">
+	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="Street" autocomplete="off" placeholder="Street Name">
+	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="Barangay" autocomplete="off" placeholder="Barangay Name">
+	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="city" autocomplete="off" placeholder="City Name">
+	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="Province" autocomplete="off" placeholder="Province Name">
+	<input type="password" class="col-md-3 py-2 mt-4 mr-2 " name="password" placeholder="Enter Your Password" required>
+	<input type="password" class="col-md-3 py-2 mt-4 mr-2 " name="confirm-password" placeholder="Enter Your Confirm Password" required>
+	<button name="submit" class="btn btn-primary mt-4 col-md-4 mx-auto" type="submit">Register</button>
 </form>
 <div>
 	Have an account! <a href="./../index.php">Login</a>
 </div>
 	</div>
 </div>
-
+	
 </div>
 </body>
 </html>

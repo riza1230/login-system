@@ -1,10 +1,21 @@
+*,*::after,*::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: verdana, sans-serif;
+}
+
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
 
+input[type="date"]::-webkit-input-placeholder{ 
+    visibility: hidden !important;
+}
+
 body{
-  min-height: 100vh;
+        overflow: hidden;
 }
 

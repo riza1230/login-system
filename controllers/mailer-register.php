@@ -1,9 +1,7 @@
 <?php 
 $msg = "";
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
+
 
 if (isset($_SESSION['SESSION_EMAIL']))
 {
@@ -36,6 +34,10 @@ if (isset($_POST['submit']))
                 require_once __DIR__ . './mailer.php';
 
                 $msg = "<div>We've send a verification link on your email address.</div>";
+                header("Location: ./../views/validate.php");
+                
+
+
             }
             else
             {
