@@ -7,10 +7,12 @@ require_once __DIR__ . './../controllers/mailer-register.php';
 
 <?php echo $msg; ?>
 
-<div class="container d-flex min-vh-100 align-items-center justify-content-center flex-grow-1">
+<div class="container d-flex min-vh-100 align-items-center justify-content-center">
 <title>Register</title>
 <div class="card mt-2 text-center">
 	<div class="card-body">
+      <div class=" d-flex flex-column justify-content-center align-items-center">
+
 	<h2 class="text-center">Register Now</h2>
 	<form action="" class="row p-4 g-3" method="post">
 	<input type="text" class="col-md-3 py-2 mt-4 mr-2 " name="name" placeholder="Enter Firstname" value="<?php if (isset($_POST['submit'])){ echo $name;} ?>" required>
