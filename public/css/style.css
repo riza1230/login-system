@@ -5,6 +5,7 @@
   font-family: verdana, sans-serif;
 }
 
+
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
@@ -16,6 +17,14 @@ input[type="date"]::-webkit-input-placeholder{
 }
 
 body{
-        overflow: hidden;
+  overflow: hidden;
 }
 
+a, a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+strong{
+  color: white;
+}

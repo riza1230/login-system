@@ -1,0 +1,14 @@
+.container,#qrcode{
+    display:flex;
+    justify-content: center; 
+    align-content: center;
+    text-align: center;
+}
+
+.container-child{
+    align-self: center;
+}
+
+#qrcode,#generated{
+    margin-top: 1rem;
+}
