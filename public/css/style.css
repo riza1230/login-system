@@ -11,7 +11,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
-
+input[type="number"] {
+        -moz-appearance: textfield;
+  }
+      input[type="number"]:hover,
+      input[type="number"]:focus {
+        -moz-appearance: number-input;
+      }
 input[type="date"]::-webkit-input-placeholder{ 
     visibility: hidden !important;
 }
