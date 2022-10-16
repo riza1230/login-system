@@ -8,7 +8,8 @@ CREATE TABLE `users` (
   `password` varchar(45) NOT NULL,
   `privilage` varchar(10) DEFAULT 'student',
   `code` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+);
+-- ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
 
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);

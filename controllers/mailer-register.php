@@ -12,6 +12,8 @@ if (isset($_SESSION['SESSION_EMAIL']))
 if (isset($_POST['submit']))
 {
     $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $middlename = mysqli_real_escape_string($conn, $_POST['middlename']);
+    $lastname = mysqli_real_escape_string($conn, $_POST['lastname']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $password = mysqli_real_escape_string($conn, md5($_POST['password']));
     $confirm_password = mysqli_real_escape_string($conn, md5($_POST['confirm-password']));

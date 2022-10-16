@@ -13,17 +13,15 @@ if (isset($_SESSION['SESSION_EMAIL']))
             <?php echo $msg; ?>
 
 <div class="container d-flex min-vh-100 align-items-center justify-content-center flex-grow-1 ">
-    <div class="card text-center ">
+    <div class="card text-center h-100 p-4 ">
         <div class="card-body">
+             <h3> <b> Forgot Password</b></h3>
 
-             <h2>Forgot Password</h2>
-
-
-            <form action="" method="POST" class="p-1">
+            <form action="" method="POST" class="   ">
                <input type="email" class="form-control mt-3" name="email" placeholder="Enter Your Email" required>
-               <button name="submit" class="btn btn-primary mt-3 mb-3 " type="submit">Send Reset Link</button>
+               <button name="submit" class="btn btn-primary mt-3 mb-3 " type="submit"><strong>Send Reset Link</strong> </button>
             </form>
-            Back to! <a href="./../index.php">Login</a>
+            Back to <a href="./../index.php"><u>Login</u> </a>
 
         </div>
     </div>
