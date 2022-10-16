@@ -45,7 +45,13 @@
 						<select name="size" id="size" style="display:none;">
 							<option value="200" selected>200x200</option>
 						</select>
-						<button type="submit" id="generate-btn" class="btn btn-primary mb-4">Generate Qrcode</button>
+						<button type="submit" id="generate-btn" class="btn btn-primary mb-4">
+						<strong>
+						Generate Qrcode
+						</strong>	
+						<i class="fa-solid fa-qrcode"></i>
+
+						</button>
 					</form>
 					<div id="qrcode" class="mb-2 d-flex justify-content-center "></div>
 					<div id="generated"></div>
