@@ -24,7 +24,7 @@
         <div class="card-body ">
                 <h1 class=""><b> Sign In</b></h1>
                 <form action="" method="POST" class="p-1">
-                    <input type="email" class="form-control mb-3" name="email" placeholder="Enter Your Email" autocomplete="username" required>
+                    <input type="email" class="form-control mb-3 " name="email" placeholder="Enter Your Email" autocomplete="username" required>
                     <input type="password" class="form-control mb-3" name="password" placeholder="Enter Your Password" autocomplete="current-password" required>
                     <button name="submit" class="btn btn-outline-primary mb-5" type="submit"><b>Login</b></button>
                 </form>

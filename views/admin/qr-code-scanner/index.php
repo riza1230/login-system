@@ -7,7 +7,6 @@
     <script src="javascript/instascan.min.js"></script>
     <script src="javascript/webrtc-adapter.js"></script>
     <link rel="shortcut icon" href="#">
-    <style><?php include_once "./public/style.css"?></style>
   </head>
 
   <body >
@@ -23,9 +22,9 @@
 
  
       <?php  
-        include_once "instascan.php";
-        include_once "./database/db_conn.php";
-        include_once "./database/db_insert.php";
+        require_once __DIR__ . "./instascan.php";
+        require_once __DIR__ . "./database/db_conn.php";
+        require_once __DIR__ . "./database/db_insert.php";
       ?>
     </div>
 

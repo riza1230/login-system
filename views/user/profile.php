@@ -35,12 +35,13 @@
 			<div class="col-md-4">
 				<div class="card shadow">
 					<div class="card-body text-center">
-          <span class="name mt-3"><?php echo $row['name']; ?></span>
+          <span class="name"> Name: <b><?php echo $row['name']; ?></b> </span>
+          <div class="name mt-3"> ID: <b><?php echo $row['id']; ?></b> </div>
 		  <div>
           <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" />
 		  </div>
+		  <form id="generate-form">
 
-					<form id="generate-form">
 						<input type="text" id="input" class="d-block" style="visibility: hidden;" value="<?php echo $row['name']; ?>" />
 						<select name="size" id="size" style="display:none;">
 							<option value="200" selected>200x200</option>

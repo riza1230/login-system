@@ -35,16 +35,16 @@
     <option value=" ">Church of Crist</option>
     <option value=" ">Tribal Religion</option>
     </select>
-
-    <div><b><h2>School Information</h2></b></div>
-    <?php require_once __DIR__ . './register-extension.php' ?>
-
     <div><b><h2>Address</h2></b></div>
     <input type="text" class="form-control mb-4" name="province" placeholder="Province" value="<?php if (isset($_POST['submit'])){ echo $province;} ?>" required>
     <input type="text" class="form-control mb-4" name="municipality" placeholder="Municipality" value="<?php if (isset($_POST['submit'])){ echo $municipality;} ?>" required>
     <input type="text" class="form-control mb-4" name="barangay" placeholder="Barangay" value="<?php if (isset($_POST['submit'])){ echo $barangay;} ?>" required>
     <input type="text" class="form-control mb-5" name="street" placeholder="Street" value="<?php if (isset($_POST['submit'])){ echo $street;} ?>" required>
 
+    <div><b><h2>School Information</h2></b></div>
+    <?php require_once __DIR__ . './register-extension.php' ?>
+
+  
     <div><b><h2>Password</h2></b></div>
     <input type="password" class="form-control mb-4" name="password" placeholder="Password" required>
     <input type="password" class="form-control mb-5" name="confirm-password" placeholder="Confirm Password" required>
